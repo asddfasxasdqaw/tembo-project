@@ -67,27 +67,57 @@ const I18N = {
   en: {
     'meta.title': 'Skillforge — AI skills for vibe-coding',
     'meta.desc':  'Beautiful .md and .txt skills that turn any AI into a production-grade designer, motion artist and 3D wizard.',
-    'nav.skills': 'Skills', 'nav.models': 'Models', 'nav.apps': 'Apps', 'nav.how': 'How it works',
+    'nav.skills': 'Skills', 'nav.models': 'Models', 'nav.apps': 'Apps', 'nav.pricing': 'Pricing', 'nav.how': 'How it works',
     'nav.browse': 'Browse skills', 'nav.cta': 'Get the pack',
 
-    'hero.chip':   'New · 42 skills, 6 model targets, weekly drops',
-    'hero.title1': 'Drop-in skills that turn any AI into a',
-    'hero.title2': 'senior creative engineer',
-    'hero.sub':    'Skillforge is a library of carefully crafted <code>.md</code> and <code>.txt</code> prompts — load one into Claude, Gemini, ChatGPT, Codex or Kimi and watch it ship liquid-glass UIs, AE compositions, Photoshop generative passes and Blender scenes that actually look shipped.',
+    'hero.chip':   'New · 2,500+ skills, every frontier model, weekly drops',
+    'hero.title1': 'Drop-in skills that turn your AI into',
+    'hero.sub':    'A library of carefully crafted <code>.md</code> and <code>.txt</code> prompts — load one into Claude, Gemini, ChatGPT, Codex, Kimi <em>or whichever model you use</em> and watch it ship like a senior.',
     'hero.cta1':   'Get the full pack', 'hero.cta2': 'See the skills →',
-    'hero.stat1':  'skills', 'hero.stat2': 'AI models', 'hero.stat3': 'creative apps', 'hero.stat4': 'creators using',
+
+    // metric tiles
+    'metric.skills.label': 'Library size',
+    'metric.skills.cap':   'skills · this page shows a small selection',
+    'metric.skills.link':  'See pricing →',
+    'metric.users.label':  'Community',
+    'metric.users.cap':    'creators shipping with Skillforge',
+    'metric.models.label': 'Works with',
+    'metric.models.value': 'ANY frontier model',
+    'metric.models.cap':   'Claude, GPT, Gemini, Codex, Kimi & whatever ships next',
+    'metric.apps.label':   'Creative apps',
+    'metric.apps.value':   'Ps · Ae · Pr · Bl · Fg',
+    'metric.apps.cap':     '…and any tool with a scripting API',
+    'metric.more':         '+ more',
+
+    // rotator words
+    'rot.0': 'a web designer',
+    'rot.1': 'a motion artist',
+    'rot.2': 'a 3D generalist',
+    'rot.3': 'a brand designer',
+    'rot.4': 'a video editor',
+    'rot.5': 'a UI engineer',
+    'rot.6': 'a recruiter',
+    'rot.7': 'a copywriter',
+    'rot.8': 'a product manager',
 
     'models.eye':    'Works with the models you already use',
     'models.title1': 'Plug into', 'models.title2': 'any frontier model',
     'models.sub':    'Every skill is tested across the major providers. Drop the file in, paste the system prompt, or wire it into your agent — same quality everywhere.',
+    'models.more':   '+ many more',
 
     'apps.eye':    'Creative tooling, automated',
     'apps.title1': 'Skills for the', 'apps.title2': 'apps you actually ship in',
-    'apps.sub':    'Photoshop generative passes, After Effects rigs, Premiere edits, Blender scenes, Figma systems — your model now speaks each one fluently.',
+    'apps.sub':    'Photoshop generative passes, After Effects rigs, Premiere edits, Blender scenes, Figma systems — and any tool with a scripting API. Your model now speaks each one fluently.',
+    'apps.more':   'and many more',
 
     'skills.eye':    'The library',
-    'skills.title1': '42 skills.', 'skills.title2': 'One drag & drop away.',
-    'skills.sub':    'Filter by app, preview the prompt, copy or download. Every skill is a single file.',
+    'skills.title1': '2,500+ skills.', 'skills.title2': 'A sampler below.',
+    'skills.sub':    'Search, filter by app, preview the prompt, copy or download. Every skill is a single file — this page shows a small selection of the full library.',
+    'skills.empty':  'No skills match your search. Try a different keyword or clear the filter.',
+    'skills.more':   'Showing a small selection — the full library has 2,500+ skills.',
+    'skills.morecta':'See pricing →',
+    'search.placeholder': "Search 2,500+ skills — try 'liquid glass', 'motion', 'mockup'…",
+
     'filter.all': 'All', 'filter.ui': 'UI / Web', 'filter.ps': 'Photoshop', 'filter.ae': 'After Effects', 'filter.pr': 'Premiere', 'filter.3d': 'Blender', 'filter.fg': 'Figma',
 
     'how.eye': 'How it works', 'how.title1': 'Three steps,', 'how.title2': 'production-grade output',
@@ -95,12 +125,29 @@ const I18N = {
     'how.s2t': 'Drop the file', 'how.s2p': 'Paste it as a system prompt, attach the <code>.md</code>, or load it into your Claude / Codex / Gemini skill slot.',
     'how.s3t': 'Ship',          'how.s3p': 'The model now knows the rules, the references, the deliverables and the gotchas. Output is consistent — across sessions and across providers.',
 
-    'cta.title1': 'Get the full pack —', 'cta.title2': '42 skills, lifetime updates.',
+    // pricing
+    'price.eye':    'Pricing',
+    'price.title1': 'Pick a tier,',
+    'price.title2': 'unlock the full 2,500+ library',
+    'price.sub':    'Lifetime updates on every plan. Cancel anytime. Team & studio licenses available.',
+    'price.per':       '/ forever',
+    'price.per.once':  '/ one-time',
+    'price.starter.tag': 'Starter', 'price.starter.sub': 'Sample the library — perfect for testing the workflow.',
+    'price.starter.f1': '12 sampler skills (this page)', 'price.starter.f2': 'All providers supported', 'price.starter.f3': 'Community support',
+    'price.starter.cta': 'Browse free skills',
+    'price.pro.tag': 'Pro', 'price.pro.badge': '★ Most popular', 'price.pro.sub': 'The full library, forever — plus every new skill we ship.',
+    'price.pro.f1': '<b>2,500+</b> skills (full catalogue)', 'price.pro.f2': 'Weekly drops, lifetime updates', 'price.pro.f3': 'Works with any AI &amp; any app', 'price.pro.f4': 'Priority Discord support',
+    'price.pro.cta': 'Get Pro',
+    'price.studio.tag': 'Studio', 'price.studio.sub': 'Team license for agencies and product teams.',
+    'price.studio.f1': 'Everything in Pro', 'price.studio.f2': 'Up to 25 seats', 'price.studio.f3': 'Custom skill on request', 'price.studio.f4': 'White-label option',
+    'price.studio.cta': 'Talk to us',
+
+    'cta.title1': 'Get the full pack —', 'cta.title2': '2,500+ skills, lifetime updates.',
     'cta.sub':    'One download. Works with every frontier model. New skills every week.',
     'cta.btn':    'Send me the pack',
     'cta.note':   'No spam. One email when the next drop ships. Unsubscribe in one click.',
 
-    'foot.skills': 'Skills', 'foot.models': 'Models', 'foot.apps': 'Apps', 'foot.cta': 'Get the pack',
+    'foot.skills': 'Skills', 'foot.models': 'Models', 'foot.apps': 'Apps', 'foot.pricing': 'Pricing', 'foot.cta': 'Get the pack',
     'foot.tag': 'Built for AI vibe-coders who care how the pixels land.',
 
     'card.preview': 'Preview', 'card.copy': 'Copy', 'card.copied': 'Copied!',
@@ -109,27 +156,55 @@ const I18N = {
   ru: {
     'meta.title': 'Skillforge — AI-скиллы для вайбкодинга',
     'meta.desc':  'Готовые .md и .txt скиллы, которые превращают любую нейронку в продакшн-дизайнера, моушн-артиста и 3D-вижуалера.',
-    'nav.skills': 'Скиллы', 'nav.models': 'Модели', 'nav.apps': 'Приложения', 'nav.how': 'Как это работает',
+    'nav.skills': 'Скиллы', 'nav.models': 'Модели', 'nav.apps': 'Приложения', 'nav.pricing': 'Тарифы', 'nav.how': 'Как это работает',
     'nav.browse': 'Каталог', 'nav.cta': 'Забрать пак',
 
-    'hero.chip':   'Новое · 42 скилла, 6 моделей, дропы каждую неделю',
-    'hero.title1': 'Готовые скиллы, превращающие нейронку в',
-    'hero.title2': 'сеньор-креатив-инженера',
-    'hero.sub':    'Skillforge — это библиотека аккуратно собранных <code>.md</code> и <code>.txt</code> промтов. Подгружаешь файл в Claude, Gemini, ChatGPT, Codex или Kimi — и получаешь liquid-glass интерфейсы, AE-композиции, генеративные проходы в Photoshop и сцены в Blender, которые выглядят, будто их делал джун-сеньор.',
+    'hero.chip':   'Новое · 2500+ скиллов, все frontier-модели, дропы каждую неделю',
+    'hero.title1': 'Готовые скиллы, превращающие твою нейронку в',
+    'hero.sub':    'Библиотека аккуратно собранных <code>.md</code> и <code>.txt</code> промтов — подгружаешь в Claude, Gemini, ChatGPT, Codex, Kimi <em>или любую другую модель</em> и получаешь результат уровня сеньора.',
     'hero.cta1':   'Забрать весь пак', 'hero.cta2': 'Открыть каталог →',
-    'hero.stat1':  'скиллов', 'hero.stat2': 'AI-моделей', 'hero.stat3': 'креативных тулов', 'hero.stat4': 'креаторов уже юзают',
+
+    'metric.skills.label': 'Размер библиотеки',
+    'metric.skills.cap':   'скиллов · на этой странице — только малая часть',
+    'metric.skills.link':  'Посмотреть тарифы →',
+    'metric.users.label':  'Сообщество',
+    'metric.users.cap':    'креаторов уже шипят со Skillforge',
+    'metric.models.label': 'Работает с',
+    'metric.models.value': 'ЛЮБОЙ frontier-моделью',
+    'metric.models.cap':   'Claude, GPT, Gemini, Codex, Kimi — и тем, что выйдет завтра',
+    'metric.apps.label':   'Креативные тулы',
+    'metric.apps.value':   'Ps · Ae · Pr · Bl · Fg',
+    'metric.apps.cap':     '…и любой инструмент со скриптовым API',
+    'metric.more':         '+ ещё',
+
+    'rot.0': 'веб-дизайнера',
+    'rot.1': 'моушн-артиста',
+    'rot.2': '3D-вижуалера',
+    'rot.3': 'бренд-дизайнера',
+    'rot.4': 'видеомонтажёра',
+    'rot.5': 'UI-инженера',
+    'rot.6': 'рекрутера',
+    'rot.7': 'копирайтера',
+    'rot.8': 'продакт-менеджера',
 
     'models.eye':    'Работает с моделями, которыми ты уже пользуешься',
     'models.title1': 'Подключай', 'models.title2': 'любую frontier-модель',
     'models.sub':    'Каждый скилл протестирован у всех основных провайдеров. Положи файл, вставь системный промт или подключи в агенте — качество одинаковое.',
+    'models.more':   '+ ещё много',
 
     'apps.eye':    'Креативные тулы — на автомате',
     'apps.title1': 'Скиллы под', 'apps.title2': 'приложения, в которых ты реально шипишь',
-    'apps.sub':    'Генеративные проходы в Photoshop, риги в After Effects, монтаж в Premiere, сцены в Blender, системы в Figma — модель говорит на языке каждого из них.',
+    'apps.sub':    'Генеративные проходы в Photoshop, риги в After Effects, монтаж в Premiere, сцены в Blender, системы в Figma — и любой тул со скриптовым API. Модель говорит на языке каждого.',
+    'apps.more':   'и много других',
 
     'skills.eye':    'Каталог',
-    'skills.title1': '42 скилла.', 'skills.title2': 'В одно движение.',
-    'skills.sub':    'Фильтруй по приложению, смотри промт, копируй или скачивай. Каждый скилл — один файл.',
+    'skills.title1': '2500+ скиллов.', 'skills.title2': 'Ниже — небольшая выборка.',
+    'skills.sub':    'Ищи, фильтруй по приложению, смотри промт, копируй или скачивай. Каждый скилл — один файл. На странице показана малая часть полной библиотеки.',
+    'skills.empty':  'Ничего не нашлось. Попробуй другое слово или сбрось фильтр.',
+    'skills.more':   'Здесь показана только выборка — в полной библиотеке 2500+ скиллов.',
+    'skills.morecta':'Посмотреть тарифы →',
+    'search.placeholder': 'Поиск по 2500+ скиллам — «liquid glass», «моушн», «мокап»…',
+
     'filter.all': 'Все', 'filter.ui': 'UI / Web', 'filter.ps': 'Photoshop', 'filter.ae': 'After Effects', 'filter.pr': 'Premiere', 'filter.3d': 'Blender', 'filter.fg': 'Figma',
 
     'how.eye': 'Как это работает', 'how.title1': 'Три шага,', 'how.title2': 'продакшн-результат',
@@ -137,12 +212,28 @@ const I18N = {
     'how.s2t': 'Подгрузи файл',    'how.s2p': 'Вставь как system prompt, прикрепи <code>.md</code> или загрузи в слот скиллов Claude / Codex / Gemini.',
     'how.s3t': 'Деплой',           'how.s3p': 'Модель знает правила, референсы, что должно быть на выходе и где обычно ломается. Стабильный результат между сессиями и провайдерами.',
 
-    'cta.title1': 'Забери весь пак —', 'cta.title2': '42 скилла, обновления на всю жизнь.',
+    'price.eye':    'Тарифы',
+    'price.title1': 'Выбери тариф,',
+    'price.title2': 'разблокируй всю библиотеку 2500+ скиллов',
+    'price.sub':    'На каждом плане — обновления навсегда. Отмена в любой момент. Команды и студии — отдельные лицензии.',
+    'price.per':       '/ навсегда',
+    'price.per.once':  '/ единоразово',
+    'price.starter.tag': 'Starter', 'price.starter.sub': 'Попробуй библиотеку — идеально для проверки воркфлоу.',
+    'price.starter.f1': '12 sampler-скиллов (на этой странице)', 'price.starter.f2': 'Любой провайдер', 'price.starter.f3': 'Поддержка в комьюнити',
+    'price.starter.cta': 'Смотреть бесплатные',
+    'price.pro.tag': 'Pro', 'price.pro.badge': '★ Популярный', 'price.pro.sub': 'Вся библиотека навсегда + все будущие дропы.',
+    'price.pro.f1': '<b>2500+</b> скиллов (полный каталог)', 'price.pro.f2': 'Дропы каждую неделю, обновления навсегда', 'price.pro.f3': 'Работает с любым ИИ и любым приложением', 'price.pro.f4': 'Приоритетная поддержка в Discord',
+    'price.pro.cta': 'Взять Pro',
+    'price.studio.tag': 'Studio', 'price.studio.sub': 'Командная лицензия для агентств и продуктовых команд.',
+    'price.studio.f1': 'Всё из Pro', 'price.studio.f2': 'До 25 пользователей', 'price.studio.f3': 'Кастомный скилл под запрос', 'price.studio.f4': 'White-label',
+    'price.studio.cta': 'Связаться',
+
+    'cta.title1': 'Забери весь пак —', 'cta.title2': '2500+ скиллов, обновления на всю жизнь.',
     'cta.sub':    'Один файл. Работает со всеми frontier-моделями. Новые скиллы каждую неделю.',
     'cta.btn':    'Прислать пак',
     'cta.note':   'Без спама. Одно письмо — когда выходит следующий дроп. Отписка в один клик.',
 
-    'foot.skills': 'Скиллы', 'foot.models': 'Модели', 'foot.apps': 'Приложения', 'foot.cta': 'Забрать пак',
+    'foot.skills': 'Скиллы', 'foot.models': 'Модели', 'foot.apps': 'Приложения', 'foot.pricing': 'Тарифы', 'foot.cta': 'Забрать пак',
     'foot.tag': 'Сделано для AI-вайбкодеров, которым важно, как ложатся пиксели.',
 
     'card.preview': 'Превью', 'card.copy': 'Копировать', 'card.copied': 'Скопировано!',
@@ -162,6 +253,7 @@ function renderSkills(lang) {
     const card = document.createElement('article');
     card.className = 'card';
     card.dataset.cat = s.cat;
+    card.dataset.searchText = [tx.title, tx.desc, ...(tx.tags || []), s.cat, s.file || ''].join(' ');
     card.style.animationDelay = (60 + i * 35) + 'ms';
 
     const tagsHtml = tx.tags.map(t => `<span class="tag">${t}</span>`).join('');
@@ -215,17 +307,64 @@ function renderSkills(lang) {
   });
 }
 
-/* ---------- filters ---------- */
+/* ---------- filters + search ---------- */
+const state = { filter: 'all', query: '' };
+
+function applyGridFilter() {
+  const q = state.query.trim().toLowerCase();
+  let visible = 0;
+  document.querySelectorAll('.card').forEach(c => {
+    const okCat = state.filter === 'all' || c.dataset.cat === state.filter;
+    const haystack = (c.dataset.searchText || '').toLowerCase();
+    const okQ = q === '' || haystack.includes(q);
+    const show = okCat && okQ;
+    c.classList.toggle('is-hidden', !show);
+    if (show) visible++;
+  });
+  const empty = document.getElementById('skillGridEmpty');
+  if (empty) empty.hidden = visible !== 0;
+  const more = document.querySelector('.grid__more');
+  if (more) more.style.display = visible === 0 ? 'none' : '';
+}
+
 function bindFilters() {
   const buttons = document.querySelectorAll('.filter');
   buttons.forEach(b => b.addEventListener('click', () => {
     buttons.forEach(x => x.classList.remove('is-active'));
     b.classList.add('is-active');
-    const f = b.dataset.filter;
-    document.querySelectorAll('.card').forEach(c => {
-      c.classList.toggle('is-hidden', !(f === 'all' || c.dataset.cat === f));
-    });
+    state.filter = b.dataset.filter;
+    applyGridFilter();
   }));
+}
+
+function bindSearch() {
+  const input  = document.getElementById('skillSearch');
+  const clear  = document.getElementById('skillSearchClear');
+  if (!input) return;
+
+  input.addEventListener('input', () => {
+    state.query = input.value;
+    clear.hidden = input.value.length === 0;
+    applyGridFilter();
+  });
+  clear.addEventListener('click', () => {
+    input.value = '';
+    state.query = '';
+    clear.hidden = true;
+    applyGridFilter();
+    input.focus();
+  });
+  // global "/" shortcut to focus search
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      input.focus();
+      input.select();
+    }
+    if (e.key === 'Escape' && document.activeElement === input) {
+      input.value = ''; state.query = ''; clear.hidden = true; applyGridFilter(); input.blur();
+    }
+  });
 }
 
 /* ---------- i18n apply ---------- */
@@ -243,6 +382,15 @@ function applyLang(lang) {
     else el.innerHTML = val;
   });
 
+  // attribute translations: data-i18n-attr="placeholder:search.placeholder"
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    el.getAttribute('data-i18n-attr').split(',').forEach(pair => {
+      const [attr, key] = pair.split(':').map(s => s.trim());
+      const val = dict[key];
+      if (val != null) el.setAttribute(attr, val);
+    });
+  });
+
   // update flag/code in switcher
   const flag = document.querySelector('.lang__flag');
   const code = document.querySelector('[data-lang-code]');
@@ -257,6 +405,59 @@ function applyLang(lang) {
   try { localStorage.setItem('skillforge.lang', lang); } catch (_) {}
 
   renderSkills(lang);
+  applyGridFilter();
+  startRotator(lang);
+  animateCounters();
+}
+
+/* ---------- rotating word (hero) ---------- */
+let _rotTimer = null;
+function rotatorWords(lang) {
+  const dict = I18N[lang] || I18N.en;
+  const out = [];
+  for (let i = 0; i < 20; i++) {
+    const v = dict['rot.' + i];
+    if (v) out.push(v); else break;
+  }
+  return out.length ? out : ['a web designer', 'a motion artist', 'a 3D generalist'];
+}
+function startRotator(lang) {
+  const inner = document.querySelector('[data-rotator]');
+  if (!inner) return;
+  if (_rotTimer) { clearInterval(_rotTimer); _rotTimer = null; }
+  const words = rotatorWords(lang);
+  let i = 0;
+  inner.innerHTML = `<span class="rotator__item">${words[0]}</span>`;
+  _rotTimer = setInterval(() => {
+    const current = inner.querySelector('.rotator__item:not(.is-out)');
+    if (!current) return;
+    current.classList.add('is-out');
+    i = (i + 1) % words.length;
+    const next = document.createElement('span');
+    next.className = 'rotator__item';
+    next.textContent = words[i];
+    inner.appendChild(next);
+    // remove old after its fade-out completes
+    setTimeout(() => current.remove(), 380);
+  }, 2400);
+}
+
+/* ---------- counter rollup ---------- */
+function animateCounters() {
+  document.querySelectorAll('[data-counter]').forEach(el => {
+    if (el.dataset.counted === '1') return;
+    const target = parseInt(el.dataset.counter, 10) || 0;
+    const dur = 1200, start = performance.now();
+    function tick(t) {
+      const p = Math.min(1, (t - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const v = Math.round(target * eased);
+      el.textContent = v.toLocaleString(window.__lang === 'ru' ? 'ru-RU' : 'en-US');
+      if (p < 1) requestAnimationFrame(tick);
+      else el.dataset.counted = '1';
+    }
+    requestAnimationFrame(tick);
+  });
 }
 
 /* ---------- language switcher behaviour ---------- */
@@ -337,6 +538,7 @@ function boot() {
   } catch (_) {}
 
   bindFilters();
+  bindSearch();
   bindLangSwitcher();
   bindParallax();
   applyLang(lang);
