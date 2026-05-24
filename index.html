@@ -36,10 +36,17 @@
       <a href="#apps" data-i18n="nav.apps">Apps</a>
       <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
       <a href="#how" data-i18n="nav.how">How it works</a>
-      <a href="#faq" data-i18n="nav.faq">FAQ</a>
     </nav>
 
     <div class="nav__right">
+      <button class="theme-toggle glass-soft" type="button" data-theme-toggle aria-label="Toggle theme">
+        <span class="theme-toggle__sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 4V1m0 22v-3m8-8h3M1 12h3m13.66-5.66 2.12-2.12M4.22 19.78l2.12-2.12m0-11.32L4.22 4.22m15.56 15.56-2.12-2.12M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </span>
+        <span class="theme-toggle__moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M20 14.5A8 8 0 0 1 9.5 4a0.5 0.5 0 0 0-.7-.6 9 9 0 1 0 11.8 11.8.5.5 0 0 0-.6-.7Z"/></svg>
+        </span>
+      </button>
       <div class="lang" data-lang-switcher>
         <button class="lang__btn glass-soft" type="button" aria-haspopup="listbox" aria-expanded="false">
           <img class="lang__flag" alt="" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/330px-Flag_of_the_United_Kingdom.svg.png" />
@@ -70,30 +77,24 @@
         <!-- LEFT METRICS -->
         <aside class="hero__side hero__side--left" aria-label="Library metrics">
           <div class="metric glass">
-            <div class="metric__top">
-              <span class="metric__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4V4Zm2 2v10a2 2 0 0 0 2 2h10V8a2 2 0 0 0-2-2H6Zm3 3h6v2H9V9Zm0 4h6v2H9v-2Z"/></svg>
-              </span>
-              <span class="metric__label" data-i18n="metric.skills.label">Library size</span>
-            </div>
+            <span class="metric__label" data-i18n="metric.skills.label">Library size</span>
             <div class="metric__value">
-              <span class="metric__num grad" data-counter="2500">2,500</span><span class="metric__plus">+</span>
+              <span class="metric__num grad" data-counter="2500">2,500</span>
+              <span class="metric__plus">+</span>
+              <span class="metric__unit" data-i18n="metric.skills.unit">skills</span>
             </div>
-            <div class="metric__caption" data-i18n="metric.skills.cap">skills · this page shows a small selection</div>
+            <div class="metric__caption" data-i18n="metric.skills.cap">in the full library — this page shows a small selection</div>
             <a class="metric__link" href="#pricing" data-i18n="metric.skills.link">See pricing →</a>
           </div>
 
           <div class="metric glass">
-            <div class="metric__top">
-              <span class="metric__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-8 9a8 8 0 1 1 16 0H4Z"/></svg>
-              </span>
-              <span class="metric__label" data-i18n="metric.users.label">Community</span>
-            </div>
+            <span class="metric__label" data-i18n="metric.users.label">Active users</span>
             <div class="metric__value">
-              <span class="metric__num grad" data-counter="5000">5,000</span><span class="metric__plus">+</span>
+              <span class="metric__num grad" data-counter="5000">5,000</span>
+              <span class="metric__plus">+</span>
+              <span class="metric__unit" data-i18n="metric.users.unit">creators</span>
             </div>
-            <div class="metric__caption" data-i18n="metric.users.cap">creators shipping with Skillforge</div>
+            <div class="metric__caption" data-i18n="metric.users.cap">shipping with Skillforge every week</div>
             <div class="avatars" aria-hidden="true">
               <span style="--c:#a78bfa"></span>
               <span style="--c:#22d3ee"></span>
@@ -114,9 +115,7 @@
           <h1 class="hero__title">
             <span data-i18n="hero.title1">Drop-in skills that turn your AI into</span>
             <span class="rotator" aria-live="polite">
-              <span class="rotator__inner grad" data-rotator>
-                <span class="rotator__item">a web designer</span>
-              </span>
+              <span class="rotator__word is-in" data-rotator>a web designer</span>
               <span class="rotator__caret" aria-hidden="true"></span>
             </span>
           </h1>
@@ -134,7 +133,8 @@
             <a class="btn btn--ghost btn--lg" href="#skills" data-i18n="hero.cta2">See the skills →</a>
           </div>
 
-          <div class="hero__card glass" aria-hidden="true">
+          <div class="hero__card glass is-idle" data-tilt aria-hidden="true">
+            <span class="hero__card-sheen" aria-hidden="true"></span>
             <div class="hero__card-bar">
               <span class="dotr"></span><span class="doty"></span><span class="dotg"></span>
               <span class="hero__card-name">liquid-glass.md</span>
@@ -154,43 +154,17 @@ You are a senior product designer specialising in
         <!-- RIGHT METRICS -->
         <aside class="hero__side hero__side--right" aria-label="Compatibility metrics">
           <div class="metric glass">
-            <div class="metric__top">
-              <span class="metric__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2 4 6v6c0 5 3.5 9.4 8 10 4.5-.6 8-5 8-10V6l-8-4Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 8c2.7 0 5 1.3 5 3v1H7v-1c0-1.7 2.3-3 5-3Z"/></svg>
-              </span>
-              <span class="metric__label" data-i18n="metric.models.label">Works with</span>
-            </div>
+            <span class="metric__label" data-i18n="metric.models.label">Works with</span>
             <div class="metric__value metric__value--text">
               <span class="grad" data-i18n="metric.models.value">ANY frontier model</span>
             </div>
-            <div class="mini-logos" aria-hidden="true">
-              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Claude_AI_logo.svg/1280px-Claude_AI_logo.svg.png" />
-              <img alt="" src="https://chatgptaihub.com/wp-content/uploads/2023/06/ChatGPT-Logo-Without-Background-Features-ChatGPT.png" />
-              <img alt="" src="https://logos-world.net/wp-content/uploads/2025/02/Google-Gemini-Logo.png" />
-              <img alt="" src="https://developers.openai.com/assets/OAI_Codex-Lockup_Fallback_Black.svg" />
-              <img alt="" src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/kimi-text.png" />
-              <span class="more-chip" data-i18n="metric.more">+ more</span>
-            </div>
-            <div class="metric__caption" data-i18n="metric.models.cap">Claude, GPT, Gemini, Codex, Kimi & whatever ships next</div>
+            <div class="metric__caption" data-i18n="metric.models.cap">Claude, GPT, Gemini, Codex, Kimi &amp; whatever ships next</div>
           </div>
 
           <div class="metric glass">
-            <div class="metric__top">
-              <span class="metric__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 5h8v8H3V5Zm10 0h8v6h-8V5Zm0 8h8v8h-8v-8Zm-10 2h8v6H3v-6Z"/></svg>
-              </span>
-              <span class="metric__label" data-i18n="metric.apps.label">Creative apps</span>
-            </div>
+            <span class="metric__label" data-i18n="metric.apps.label">Creative apps</span>
             <div class="metric__value metric__value--text">
-              <span class="grad" data-i18n="metric.apps.value">Ps · Ae · Pr · Bl · Fg</span>
-            </div>
-            <div class="mini-logos mini-logos--apps" aria-hidden="true">
-              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Adobe_Photoshop_CC_2026_icon.svg/1280px-Adobe_Photoshop_CC_2026_icon.svg.png" />
-              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Adobe_After_Effects_CC_2026_icon.svg/1280px-Adobe_After_Effects_CC_2026_icon.svg.png" />
-              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Adobe_Premiere_Pro_CC_2026_icon.svg/1280px-Adobe_Premiere_Pro_CC_2026_icon.svg.png" />
-              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/960px-Blender_logo_no_text.svg.png" />
-              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/960px-Figma-logo.svg.png" />
-              <span class="more-chip" data-i18n="metric.more">+ more</span>
+              <span class="grad" data-i18n="metric.apps.value">Photoshop · After Effects · Premiere · Blender · Figma</span>
             </div>
             <div class="metric__caption" data-i18n="metric.apps.cap">…and any tool with a scripting API</div>
           </div>
@@ -294,20 +268,20 @@ You are a senior product designer specialising in
           <svg class="search__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M11 3a8 8 0 1 1-5.3 14L2 20.7 3.3 22l3.7-3.7A8 8 0 0 1 11 3Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg>
           <input
             id="skillSearch"
-            type="search"
+            type="text"
             autocomplete="off"
             spellcheck="false"
             data-i18n-attr="placeholder:search.placeholder"
-            placeholder="Search 2,500+ skills — try 'liquid glass', 'motion', 'mockup'…"
+            placeholder="Search 2,500+ skills — try 'liquid glass', 'tea sommelier', 'mockup'…"
             aria-label="Search skills" />
-          <button type="button" class="search__clear" id="skillSearchClear" aria-label="Clear search" hidden>
-            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="m4 4 8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </button>
-          <kbd class="search__kbd" aria-hidden="true">/</kbd>
+          <span class="search__enter" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 6v4a3 3 0 0 1-3 3H5m0 0 4-4m-4 4 4 4"/></svg>
+          </span>
         </div>
 
         <div class="filters" role="tablist" aria-label="Filter skills">
           <button class="filter is-active" data-filter="all" data-i18n="filter.all">All</button>
+          <button class="filter" data-filter="universal" data-i18n="filter.univ">No app · personas</button>
           <button class="filter" data-filter="ui" data-i18n="filter.ui">UI / Web</button>
           <button class="filter" data-filter="photoshop" data-i18n="filter.ps">Photoshop</button>
           <button class="filter" data-filter="ae" data-i18n="filter.ae">After Effects</button>
@@ -413,123 +387,6 @@ You are a senior product designer specialising in
           <p data-i18n="how.s3p">The model now knows the rules, the references, the deliverables and the gotchas. Output is consistent — across sessions and across providers.</p>
         </li>
       </ol>
-    </section>
-
-    <!-- ANATOMY of a skill -->
-    <section id="anatomy" class="section">
-      <header class="section__head">
-        <span class="eyebrow" data-i18n="anat.eye">Anatomy of a skill</span>
-        <h2 class="section__title">
-          <span data-i18n="anat.title1">What's inside</span>
-          <span class="grad" data-i18n="anat.title2">a single .md file</span>
-        </h2>
-        <p class="section__sub" data-i18n="anat.sub">
-          Every skill is one Markdown file with four blocks. Drop it in — your model now has the spec, the rules and the deliverables, baked in.
-        </p>
-      </header>
-
-      <div class="anatomy">
-        <article class="anat glass">
-          <span class="anat__num">01</span>
-          <h3 data-i18n="anat.b1t">Persona</h3>
-          <p data-i18n="anat.b1p">Who the model is pretending to be. Years of experience, taste, the studios they've worked at.</p>
-        </article>
-        <article class="anat glass">
-          <span class="anat__num">02</span>
-          <h3 data-i18n="anat.b2t">Rules</h3>
-          <p data-i18n="anat.b2p">The non-negotiables: tokens, naming, a11y, performance budgets, file structure.</p>
-        </article>
-        <article class="anat glass">
-          <span class="anat__num">03</span>
-          <h3 data-i18n="anat.b3t">References</h3>
-          <p data-i18n="anat.b3p">Curated visual & code references — what good looks like, what to copy, what to avoid.</p>
-        </article>
-        <article class="anat glass">
-          <span class="anat__num">04</span>
-          <h3 data-i18n="anat.b4t">Deliverables</h3>
-          <p data-i18n="anat.b4p">A numbered list of what must come out. The model stops only when every item is shipped.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="love" class="section">
-      <header class="section__head">
-        <span class="eyebrow" data-i18n="tst.eye">Loved by creators</span>
-        <h2 class="section__title">
-          <span data-i18n="tst.title1">5,000+ creators,</span>
-          <span class="grad" data-i18n="tst.title2">one drag &amp; drop away</span>
-        </h2>
-      </header>
-
-      <div class="quotes">
-        <figure class="quote glass">
-          <blockquote data-i18n="tst.q1">“The liquid-glass skill alone paid for the whole pack. My Claude sessions now output Apple-grade glass without me prompting twice.”</blockquote>
-          <figcaption>
-            <span class="quote__avatar" style="--c:#a78bfa"></span>
-            <span><b data-i18n="tst.n1">Mira Sato</b><em data-i18n="tst.r1">Product Designer · Tokyo</em></span>
-          </figcaption>
-        </figure>
-        <figure class="quote glass">
-          <blockquote data-i18n="tst.q2">“I dropped the AE motion-system skill into ChatGPT and got expressions I'd usually spend a day writing. Saved me a whole pitch.”</blockquote>
-          <figcaption>
-            <span class="quote__avatar" style="--c:#22d3ee"></span>
-            <span><b data-i18n="tst.n2">Daniel Reyes</b><em data-i18n="tst.r2">Motion Director · Mexico City</em></span>
-          </figcaption>
-        </figure>
-        <figure class="quote glass">
-          <blockquote data-i18n="tst.q3">“We onboard juniors with Skillforge now. One file replaces a 40-page style guide and the output is consistent across the team.”</blockquote>
-          <figcaption>
-            <span class="quote__avatar" style="--c:#f472b6"></span>
-            <span><b data-i18n="tst.n3">Lena Wagner</b><em data-i18n="tst.r3">Design Lead · Berlin</em></span>
-          </figcaption>
-        </figure>
-        <figure class="quote glass">
-          <blockquote data-i18n="tst.q4">“The Blender scene-builder reads like a senior 3D artist's brain. I'm shipping product shots in an hour, not a week.”</blockquote>
-          <figcaption>
-            <span class="quote__avatar" style="--c:#fbbf24"></span>
-            <span><b data-i18n="tst.n4">Arjun Mehta</b><em data-i18n="tst.r4">3D Generalist · Bengaluru</em></span>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section">
-      <header class="section__head">
-        <span class="eyebrow" data-i18n="faq.eye">FAQ</span>
-        <h2 class="section__title">
-          <span data-i18n="faq.title1">Quick answers,</span>
-          <span class="grad" data-i18n="faq.title2">no fluff</span>
-        </h2>
-      </header>
-
-      <div class="faq">
-        <details class="faq__item glass" open>
-          <summary data-i18n="faq.q1">What exactly do I download?</summary>
-          <div data-i18n="faq.a1">A folder of <code>.md</code> and <code>.txt</code> files — one per skill. No app, no signup loop. Drop the file into your model's system prompt or attach it to the chat.</div>
-        </details>
-        <details class="faq__item glass">
-          <summary data-i18n="faq.q2">Does it really work with any AI?</summary>
-          <div data-i18n="faq.a2">Yes — every skill is tested against Claude, GPT, Gemini, Codex and Kimi. Skills are plain Markdown, so any model that reads text can use them. New providers work out of the box.</div>
-        </details>
-        <details class="faq__item glass">
-          <summary data-i18n="faq.q3">Are 2,500+ skills really useful or is it filler?</summary>
-          <div data-i18n="faq.a3">No filler. The library is organised by app and role — you'll typically use 5–10 skills regularly. The breadth means there's always one ready for the niche brief that comes in tomorrow.</div>
-        </details>
-        <details class="faq__item glass">
-          <summary data-i18n="faq.q4">How often is the library updated?</summary>
-          <div data-i18n="faq.a4">Weekly drops. Lifetime updates on Pro and Studio — every new skill we ship lands in your folder.</div>
-        </details>
-        <details class="faq__item glass">
-          <summary data-i18n="faq.q5">Can I use skills in a commercial project?</summary>
-          <div data-i18n="faq.a5">Yes. The license covers commercial work for you or your studio. The only thing you can't do is repackage the library and resell it.</div>
-        </details>
-        <details class="faq__item glass">
-          <summary data-i18n="faq.q6">Refund policy?</summary>
-          <div data-i18n="faq.a6">14 days, no questions asked. Email us and the refund goes through.</div>
-        </details>
-      </div>
     </section>
 
     <!-- CTA -->
