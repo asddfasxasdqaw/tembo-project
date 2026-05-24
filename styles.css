@@ -355,7 +355,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ---------- section ---------- */
 .section {
   max-width: var(--maxw); margin: 0 auto; padding: 80px 22px;
+  scroll-margin-top: 96px;
 }
+.hero { scroll-margin-top: 96px; }
 .section__head { max-width: 760px; margin: 0 auto 44px; text-align: center; }
 .eyebrow {
   display: inline-block; padding: 6px 12px; border-radius: 999px;
