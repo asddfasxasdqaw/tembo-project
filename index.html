@@ -34,6 +34,7 @@
       <a href="#skills" data-i18n="nav.skills">Skills</a>
       <a href="#models" data-i18n="nav.models">Models</a>
       <a href="#apps" data-i18n="nav.apps">Apps</a>
+      <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
       <a href="#how" data-i18n="nav.how">How it works</a>
     </nav>
 
@@ -63,37 +64,81 @@
   <!-- hero -->
   <main id="top">
     <section class="hero">
-      <div class="hero__chip glass-soft">
-        <span class="dot"></span>
-        <span data-i18n="hero.chip">New · 42 skills, 6 model targets, weekly drops</span>
-      </div>
+      <div class="hero__grid">
 
-      <h1 class="hero__title">
-        <span data-i18n="hero.title1">Drop-in skills that turn any AI into a</span>
-        <span class="grad" data-i18n="hero.title2">senior creative engineer</span>
-      </h1>
+        <!-- LEFT METRICS -->
+        <aside class="hero__side hero__side--left" aria-label="Library metrics">
+          <div class="metric glass">
+            <div class="metric__top">
+              <span class="metric__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4V4Zm2 2v10a2 2 0 0 0 2 2h10V8a2 2 0 0 0-2-2H6Zm3 3h6v2H9V9Zm0 4h6v2H9v-2Z"/></svg>
+              </span>
+              <span class="metric__label" data-i18n="metric.skills.label">Library size</span>
+            </div>
+            <div class="metric__value">
+              <span class="metric__num grad" data-counter="2500">2,500</span><span class="metric__plus">+</span>
+            </div>
+            <div class="metric__caption" data-i18n="metric.skills.cap">skills · this page shows a small selection</div>
+            <a class="metric__link" href="#pricing" data-i18n="metric.skills.link">See pricing →</a>
+          </div>
 
-      <p class="hero__sub" data-i18n="hero.sub">
-        Skillforge is a library of carefully crafted <code>.md</code> and <code>.txt</code> prompts — load one
-        into Claude, Gemini, ChatGPT, Codex or Kimi and watch it ship liquid-glass UIs, AE compositions,
-        Photoshop generative passes and Blender scenes that actually look shipped.
-      </p>
+          <div class="metric glass">
+            <div class="metric__top">
+              <span class="metric__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-8 9a8 8 0 1 1 16 0H4Z"/></svg>
+              </span>
+              <span class="metric__label" data-i18n="metric.users.label">Community</span>
+            </div>
+            <div class="metric__value">
+              <span class="metric__num grad" data-counter="5000">5,000</span><span class="metric__plus">+</span>
+            </div>
+            <div class="metric__caption" data-i18n="metric.users.cap">creators shipping with Skillforge</div>
+            <div class="avatars" aria-hidden="true">
+              <span style="--c:#a78bfa"></span>
+              <span style="--c:#22d3ee"></span>
+              <span style="--c:#f472b6"></span>
+              <span style="--c:#fbbf24"></span>
+              <span class="avatars__more">+</span>
+            </div>
+          </div>
+        </aside>
 
-      <div class="hero__cta">
-        <a class="btn btn--primary btn--lg" href="#cta">
-          <span data-i18n="hero.cta1">Get the full pack</span>
-          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="m11 4 6 6-6 6-1.4-1.4 3.6-3.6H3v-2h10.2L9.6 5.4z"/></svg>
-        </a>
-        <a class="btn btn--ghost btn--lg" href="#skills" data-i18n="hero.cta2">See the skills →</a>
-      </div>
+        <!-- CENTER HERO -->
+        <div class="hero__center">
+          <div class="hero__chip glass-soft">
+            <span class="dot"></span>
+            <span data-i18n="hero.chip">New · 2,500+ skills, every frontier model, weekly drops</span>
+          </div>
 
-      <!-- floating preview card -->
-      <div class="hero__card glass" aria-hidden="true">
-        <div class="hero__card-bar">
-          <span class="dotr"></span><span class="doty"></span><span class="dotg"></span>
-          <span class="hero__card-name">liquid-glass.md</span>
-        </div>
-        <pre class="hero__card-code"><span class="tk-c"># Skill: Liquid Glass UI</span>
+          <h1 class="hero__title">
+            <span data-i18n="hero.title1">Drop-in skills that turn your AI into</span>
+            <span class="rotator" aria-live="polite">
+              <span class="rotator__inner grad" data-rotator>
+                <span class="rotator__item">a web designer</span>
+              </span>
+              <span class="rotator__caret" aria-hidden="true"></span>
+            </span>
+          </h1>
+
+          <p class="hero__sub" data-i18n="hero.sub">
+            A library of carefully crafted <code>.md</code> and <code>.txt</code> prompts — load one into Claude, Gemini, ChatGPT, Codex, Kimi
+            <em>or whichever model you use</em> and watch it ship like a senior.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="#cta">
+              <span data-i18n="hero.cta1">Get the full pack</span>
+              <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="m11 4 6 6-6 6-1.4-1.4 3.6-3.6H3v-2h10.2L9.6 5.4z"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#skills" data-i18n="hero.cta2">See the skills →</a>
+          </div>
+
+          <div class="hero__card glass" aria-hidden="true">
+            <div class="hero__card-bar">
+              <span class="dotr"></span><span class="doty"></span><span class="dotg"></span>
+              <span class="hero__card-name">liquid-glass.md</span>
+            </div>
+            <pre class="hero__card-code"><span class="tk-c"># Skill: Liquid Glass UI</span>
 <span class="tk-c">## Persona</span>
 You are a senior product designer specialising in
 <span class="tk-s">Apple-grade</span> glass UI. Output <span class="tk-s">production-ready</span> code.
@@ -101,22 +146,56 @@ You are a senior product designer specialising in
 <span class="tk-c">## Rules</span>
 - Multi-layer <span class="tk-k">backdrop-filter</span>: blur + saturate + brightness
 - 1px inner highlight, 1px outer shadow, tinted noise
-- Specular sheen on hover; never use flat <span class="tk-k">rgba(255,255,255,.1)</span>
-- Respect <span class="tk-k">prefers-reduced-motion</span> &amp; <span class="tk-k">contrast</span>
+- Specular sheen on hover; never use flat <span class="tk-k">rgba(255,255,255,.1)</span></pre>
+          </div>
+        </div>
 
-<span class="tk-c">## Deliverables</span>
-1. Tokens (tints, blurs, sheens)
-2. Reusable <span class="tk-s">&lt;GlassCard /&gt;</span> + variants
-3. A11y notes &amp; fallback for Firefox</pre>
+        <!-- RIGHT METRICS -->
+        <aside class="hero__side hero__side--right" aria-label="Compatibility metrics">
+          <div class="metric glass">
+            <div class="metric__top">
+              <span class="metric__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2 4 6v6c0 5 3.5 9.4 8 10 4.5-.6 8-5 8-10V6l-8-4Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 8c2.7 0 5 1.3 5 3v1H7v-1c0-1.7 2.3-3 5-3Z"/></svg>
+              </span>
+              <span class="metric__label" data-i18n="metric.models.label">Works with</span>
+            </div>
+            <div class="metric__value metric__value--text">
+              <span class="grad" data-i18n="metric.models.value">ANY frontier model</span>
+            </div>
+            <div class="mini-logos" aria-hidden="true">
+              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Claude_AI_logo.svg/1280px-Claude_AI_logo.svg.png" />
+              <img alt="" src="https://chatgptaihub.com/wp-content/uploads/2023/06/ChatGPT-Logo-Without-Background-Features-ChatGPT.png" />
+              <img alt="" src="https://logos-world.net/wp-content/uploads/2025/02/Google-Gemini-Logo.png" />
+              <img alt="" src="https://developers.openai.com/assets/OAI_Codex-Lockup_Fallback_Black.svg" />
+              <img alt="" src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/kimi-text.png" />
+              <span class="more-chip" data-i18n="metric.more">+ more</span>
+            </div>
+            <div class="metric__caption" data-i18n="metric.models.cap">Claude, GPT, Gemini, Codex, Kimi & whatever ships next</div>
+          </div>
+
+          <div class="metric glass">
+            <div class="metric__top">
+              <span class="metric__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 5h8v8H3V5Zm10 0h8v6h-8V5Zm0 8h8v8h-8v-8Zm-10 2h8v6H3v-6Z"/></svg>
+              </span>
+              <span class="metric__label" data-i18n="metric.apps.label">Creative apps</span>
+            </div>
+            <div class="metric__value metric__value--text">
+              <span class="grad" data-i18n="metric.apps.value">Ps · Ae · Pr · Bl · Fg</span>
+            </div>
+            <div class="mini-logos mini-logos--apps" aria-hidden="true">
+              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Adobe_Photoshop_CC_2026_icon.svg/1280px-Adobe_Photoshop_CC_2026_icon.svg.png" />
+              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Adobe_After_Effects_CC_2026_icon.svg/1280px-Adobe_After_Effects_CC_2026_icon.svg.png" />
+              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Adobe_Premiere_Pro_CC_2026_icon.svg/1280px-Adobe_Premiere_Pro_CC_2026_icon.svg.png" />
+              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/960px-Blender_logo_no_text.svg.png" />
+              <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/960px-Figma-logo.svg.png" />
+              <span class="more-chip" data-i18n="metric.more">+ more</span>
+            </div>
+            <div class="metric__caption" data-i18n="metric.apps.cap">…and any tool with a scripting API</div>
+          </div>
+        </aside>
+
       </div>
-
-      <!-- live stats -->
-      <ul class="hero__stats">
-        <li class="glass-soft"><b>42</b><span data-i18n="hero.stat1">skills</span></li>
-        <li class="glass-soft"><b>6</b><span data-i18n="hero.stat2">AI models</span></li>
-        <li class="glass-soft"><b>5</b><span data-i18n="hero.stat3">creative apps</span></li>
-        <li class="glass-soft"><b>2k+</b><span data-i18n="hero.stat4">creators using</span></li>
-      </ul>
     </section>
 
     <!-- MODELS -->
@@ -148,6 +227,9 @@ You are a senior product designer specialising in
         </div>
         <div class="logo glass-soft" title="Kimi">
           <img alt="Kimi" src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/kimi-text.png" />
+        </div>
+        <div class="logo logo--more glass-soft" data-i18n="models.more" title="+ many more">
+          <span>+ many more</span>
         </div>
       </div>
     </section>
@@ -187,6 +269,10 @@ You are a senior product designer specialising in
           <img alt="Figma" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/960px-Figma-logo.svg.png" />
           <span>Figma</span>
         </div>
+        <div class="app app--more glass-soft">
+          <span class="app-more-icon" aria-hidden="true">＋</span>
+          <span data-i18n="apps.more">and many more</span>
+        </div>
       </div>
     </section>
 
@@ -195,12 +281,29 @@ You are a senior product designer specialising in
       <header class="section__head">
         <span class="eyebrow" data-i18n="skills.eye">The library</span>
         <h2 class="section__title">
-          <span data-i18n="skills.title1">42 skills.</span>
-          <span class="grad" data-i18n="skills.title2">One drag &amp; drop away.</span>
+          <span data-i18n="skills.title1">2,500+ skills.</span>
+          <span class="grad" data-i18n="skills.title2">A sampler below.</span>
         </h2>
         <p class="section__sub" data-i18n="skills.sub">
-          Filter by app, preview the prompt, copy or download. Every skill is a single file.
+          Search, filter by app, preview the prompt, copy or download. Every skill is a single file —
+          this page shows a small selection of the full library.
         </p>
+
+        <div class="search glass-soft">
+          <svg class="search__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M11 3a8 8 0 1 1-5.3 14L2 20.7 3.3 22l3.7-3.7A8 8 0 0 1 11 3Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg>
+          <input
+            id="skillSearch"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            data-i18n-attr="placeholder:search.placeholder"
+            placeholder="Search 2,500+ skills — try 'liquid glass', 'motion', 'mockup'…"
+            aria-label="Search skills" />
+          <button type="button" class="search__clear" id="skillSearchClear" aria-label="Clear search" hidden>
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="m4 4 8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <kbd class="search__kbd" aria-hidden="true">/</kbd>
+        </div>
 
         <div class="filters" role="tablist" aria-label="Filter skills">
           <button class="filter is-active" data-filter="all" data-i18n="filter.all">All</button>
@@ -214,6 +317,72 @@ You are a senior product designer specialising in
       </header>
 
       <div class="grid" id="skillGrid"><!-- injected by script.js --></div>
+      <p class="grid__empty" id="skillGridEmpty" hidden data-i18n="skills.empty">
+        No skills match your search. Try a different keyword or clear the filter.
+      </p>
+      <div class="grid__more glass-soft">
+        <span data-i18n="skills.more">Showing a small selection — the full library has 2,500+ skills.</span>
+        <a class="btn btn--ghost" href="#pricing" data-i18n="skills.morecta">See pricing →</a>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+      <header class="section__head">
+        <span class="eyebrow" data-i18n="price.eye">Pricing</span>
+        <h2 class="section__title">
+          <span data-i18n="price.title1">Pick a tier,</span>
+          <span class="grad" data-i18n="price.title2">unlock the full 2,500+ library</span>
+        </h2>
+        <p class="section__sub" data-i18n="price.sub">Lifetime updates on every plan. Cancel anytime. Team & studio licenses available.</p>
+      </header>
+
+      <div class="pricing">
+        <article class="plan glass">
+          <header class="plan__head">
+            <span class="plan__tag" data-i18n="price.starter.tag">Starter</span>
+            <div class="plan__price"><span class="plan__cur">$</span><span class="plan__num">0</span><span class="plan__per" data-i18n="price.per">/ forever</span></div>
+            <p class="plan__sub" data-i18n="price.starter.sub">Sample the library — perfect for testing the workflow.</p>
+          </header>
+          <ul class="plan__list">
+            <li data-i18n="price.starter.f1">12 sampler skills (this page)</li>
+            <li data-i18n="price.starter.f2">All providers supported</li>
+            <li data-i18n="price.starter.f3">Community support</li>
+          </ul>
+          <a class="btn btn--ghost btn--lg plan__cta" href="#skills" data-i18n="price.starter.cta">Browse free skills</a>
+        </article>
+
+        <article class="plan plan--featured glass">
+          <span class="plan__badge" data-i18n="price.pro.badge">★ Most popular</span>
+          <header class="plan__head">
+            <span class="plan__tag" data-i18n="price.pro.tag">Pro</span>
+            <div class="plan__price"><span class="plan__cur">$</span><span class="plan__num">49</span><span class="plan__per" data-i18n="price.per.once">/ one-time</span></div>
+            <p class="plan__sub" data-i18n="price.pro.sub">The full library, forever — plus every new skill we ship.</p>
+          </header>
+          <ul class="plan__list">
+            <li data-i18n="price.pro.f1"><b>2,500+</b> skills (full catalogue)</li>
+            <li data-i18n="price.pro.f2">Weekly drops, lifetime updates</li>
+            <li data-i18n="price.pro.f3">Works with any AI &amp; any app</li>
+            <li data-i18n="price.pro.f4">Priority Discord support</li>
+          </ul>
+          <a class="btn btn--primary btn--lg plan__cta" href="#cta" data-i18n="price.pro.cta">Get Pro</a>
+        </article>
+
+        <article class="plan glass">
+          <header class="plan__head">
+            <span class="plan__tag" data-i18n="price.studio.tag">Studio</span>
+            <div class="plan__price"><span class="plan__cur">$</span><span class="plan__num">199</span><span class="plan__per" data-i18n="price.per.once">/ one-time</span></div>
+            <p class="plan__sub" data-i18n="price.studio.sub">Team license for agencies and product teams.</p>
+          </header>
+          <ul class="plan__list">
+            <li data-i18n="price.studio.f1">Everything in Pro</li>
+            <li data-i18n="price.studio.f2">Up to 25 seats</li>
+            <li data-i18n="price.studio.f3">Custom skill on request</li>
+            <li data-i18n="price.studio.f4">White-label option</li>
+          </ul>
+          <a class="btn btn--ghost btn--lg plan__cta" href="#cta" data-i18n="price.studio.cta">Talk to us</a>
+        </article>
+      </div>
     </section>
 
     <!-- HOW IT WORKS -->
@@ -269,6 +438,7 @@ You are a senior product designer specialising in
         <a href="#skills" data-i18n="foot.skills">Skills</a>
         <a href="#models" data-i18n="foot.models">Models</a>
         <a href="#apps" data-i18n="foot.apps">Apps</a>
+        <a href="#pricing" data-i18n="foot.pricing">Pricing</a>
         <a href="#cta" data-i18n="foot.cta">Get the pack</a>
       </div>
       <small data-i18n="foot.tag">Built for AI vibe-coders who care how the pixels land.</small>
