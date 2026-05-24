@@ -36,6 +36,7 @@
       <a href="#apps" data-i18n="nav.apps">Apps</a>
       <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
       <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
     </nav>
 
     <div class="nav__right">
@@ -412,6 +413,123 @@ You are a senior product designer specialising in
           <p data-i18n="how.s3p">The model now knows the rules, the references, the deliverables and the gotchas. Output is consistent — across sessions and across providers.</p>
         </li>
       </ol>
+    </section>
+
+    <!-- ANATOMY of a skill -->
+    <section id="anatomy" class="section">
+      <header class="section__head">
+        <span class="eyebrow" data-i18n="anat.eye">Anatomy of a skill</span>
+        <h2 class="section__title">
+          <span data-i18n="anat.title1">What's inside</span>
+          <span class="grad" data-i18n="anat.title2">a single .md file</span>
+        </h2>
+        <p class="section__sub" data-i18n="anat.sub">
+          Every skill is one Markdown file with four blocks. Drop it in — your model now has the spec, the rules and the deliverables, baked in.
+        </p>
+      </header>
+
+      <div class="anatomy">
+        <article class="anat glass">
+          <span class="anat__num">01</span>
+          <h3 data-i18n="anat.b1t">Persona</h3>
+          <p data-i18n="anat.b1p">Who the model is pretending to be. Years of experience, taste, the studios they've worked at.</p>
+        </article>
+        <article class="anat glass">
+          <span class="anat__num">02</span>
+          <h3 data-i18n="anat.b2t">Rules</h3>
+          <p data-i18n="anat.b2p">The non-negotiables: tokens, naming, a11y, performance budgets, file structure.</p>
+        </article>
+        <article class="anat glass">
+          <span class="anat__num">03</span>
+          <h3 data-i18n="anat.b3t">References</h3>
+          <p data-i18n="anat.b3p">Curated visual & code references — what good looks like, what to copy, what to avoid.</p>
+        </article>
+        <article class="anat glass">
+          <span class="anat__num">04</span>
+          <h3 data-i18n="anat.b4t">Deliverables</h3>
+          <p data-i18n="anat.b4p">A numbered list of what must come out. The model stops only when every item is shipped.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="love" class="section">
+      <header class="section__head">
+        <span class="eyebrow" data-i18n="tst.eye">Loved by creators</span>
+        <h2 class="section__title">
+          <span data-i18n="tst.title1">5,000+ creators,</span>
+          <span class="grad" data-i18n="tst.title2">one drag &amp; drop away</span>
+        </h2>
+      </header>
+
+      <div class="quotes">
+        <figure class="quote glass">
+          <blockquote data-i18n="tst.q1">“The liquid-glass skill alone paid for the whole pack. My Claude sessions now output Apple-grade glass without me prompting twice.”</blockquote>
+          <figcaption>
+            <span class="quote__avatar" style="--c:#a78bfa"></span>
+            <span><b data-i18n="tst.n1">Mira Sato</b><em data-i18n="tst.r1">Product Designer · Tokyo</em></span>
+          </figcaption>
+        </figure>
+        <figure class="quote glass">
+          <blockquote data-i18n="tst.q2">“I dropped the AE motion-system skill into ChatGPT and got expressions I'd usually spend a day writing. Saved me a whole pitch.”</blockquote>
+          <figcaption>
+            <span class="quote__avatar" style="--c:#22d3ee"></span>
+            <span><b data-i18n="tst.n2">Daniel Reyes</b><em data-i18n="tst.r2">Motion Director · Mexico City</em></span>
+          </figcaption>
+        </figure>
+        <figure class="quote glass">
+          <blockquote data-i18n="tst.q3">“We onboard juniors with Skillforge now. One file replaces a 40-page style guide and the output is consistent across the team.”</blockquote>
+          <figcaption>
+            <span class="quote__avatar" style="--c:#f472b6"></span>
+            <span><b data-i18n="tst.n3">Lena Wagner</b><em data-i18n="tst.r3">Design Lead · Berlin</em></span>
+          </figcaption>
+        </figure>
+        <figure class="quote glass">
+          <blockquote data-i18n="tst.q4">“The Blender scene-builder reads like a senior 3D artist's brain. I'm shipping product shots in an hour, not a week.”</blockquote>
+          <figcaption>
+            <span class="quote__avatar" style="--c:#fbbf24"></span>
+            <span><b data-i18n="tst.n4">Arjun Mehta</b><em data-i18n="tst.r4">3D Generalist · Bengaluru</em></span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <header class="section__head">
+        <span class="eyebrow" data-i18n="faq.eye">FAQ</span>
+        <h2 class="section__title">
+          <span data-i18n="faq.title1">Quick answers,</span>
+          <span class="grad" data-i18n="faq.title2">no fluff</span>
+        </h2>
+      </header>
+
+      <div class="faq">
+        <details class="faq__item glass" open>
+          <summary data-i18n="faq.q1">What exactly do I download?</summary>
+          <div data-i18n="faq.a1">A folder of <code>.md</code> and <code>.txt</code> files — one per skill. No app, no signup loop. Drop the file into your model's system prompt or attach it to the chat.</div>
+        </details>
+        <details class="faq__item glass">
+          <summary data-i18n="faq.q2">Does it really work with any AI?</summary>
+          <div data-i18n="faq.a2">Yes — every skill is tested against Claude, GPT, Gemini, Codex and Kimi. Skills are plain Markdown, so any model that reads text can use them. New providers work out of the box.</div>
+        </details>
+        <details class="faq__item glass">
+          <summary data-i18n="faq.q3">Are 2,500+ skills really useful or is it filler?</summary>
+          <div data-i18n="faq.a3">No filler. The library is organised by app and role — you'll typically use 5–10 skills regularly. The breadth means there's always one ready for the niche brief that comes in tomorrow.</div>
+        </details>
+        <details class="faq__item glass">
+          <summary data-i18n="faq.q4">How often is the library updated?</summary>
+          <div data-i18n="faq.a4">Weekly drops. Lifetime updates on Pro and Studio — every new skill we ship lands in your folder.</div>
+        </details>
+        <details class="faq__item glass">
+          <summary data-i18n="faq.q5">Can I use skills in a commercial project?</summary>
+          <div data-i18n="faq.a5">Yes. The license covers commercial work for you or your studio. The only thing you can't do is repackage the library and resell it.</div>
+        </details>
+        <details class="faq__item glass">
+          <summary data-i18n="faq.q6">Refund policy?</summary>
+          <div data-i18n="faq.a6">14 days, no questions asked. Email us and the refund goes through.</div>
+        </details>
+      </div>
     </section>
 
     <!-- CTA -->
