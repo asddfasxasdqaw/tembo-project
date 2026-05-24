@@ -1,5 +1,5 @@
 /* =========================================================
-   Skillforge — landing logic
+   Skillforge: landing logic
    ========================================================= */
 
 /* ---------- skill catalog ---------- */
@@ -17,8 +17,8 @@ const UNIVERSAL_GLYPH = '✦';
 
 const SKILLS = [
   { id: 'liquid-glass',   cat: 'ui',        file: 'liquid-glass.md',         hot: true,
-    en: { title: 'Liquid Glass UI',         desc: 'Apple-grade glass surfaces — multi-layer blur, specular highlights, tinted noise, a11y fallbacks.', tags: ['CSS', 'React', 'Tailwind'] },
-    ru: { title: 'Liquid Glass интерфейсы', desc: 'Стеклянные поверхности уровня Apple — многослойное размытие, блики, шум, фоллбэки доступности.', tags: ['CSS', 'React', 'Tailwind'] } },
+    en: { title: 'Liquid Glass UI',         desc: 'Apple-grade glass surfaces: multi-layer blur, specular highlights, tinted noise, a11y fallbacks.', tags: ['CSS', 'React', 'Tailwind'] },
+    ru: { title: 'Liquid Glass интерфейсы', desc: 'Стеклянные поверхности уровня Apple: многослойное размытие, блики, шум, фоллбэки доступности.', tags: ['CSS', 'React', 'Tailwind'] } },
 
   { id: 'gen-photoshop',  cat: 'photoshop', file: 'ps-generative-pass.md',   hot: true,
     en: { title: 'PS Generative Pass',      desc: 'Plans masks, expand fills, neural filters and export queues for the new Generative workflow.', tags: ['Generative Fill', 'Actions', 'JSX'] },
@@ -61,21 +61,21 @@ const SKILLS = [
     ru: { title: 'Figma прототипы Pro',     desc: 'Соберёт smart-animate потоки, реактивные взаимодействия и ветвление прототипа по брифу.', tags: ['Smart Animate', 'Variables', 'Branching'] } },
 
   { id: 'ui-marketing',   cat: 'ui',
-    en: { title: 'Marketing Page in a Day', desc: 'A11y-first Next.js page with hero, social proof, pricing, FAQ — TS + Tailwind + Framer Motion.', tags: ['Next.js', 'TS', 'Tailwind'] },
-    ru: { title: 'Маркетинг-лендинг за день', desc: 'Доступный Next.js лендинг: hero, соцпруф, тарифы, FAQ — TS + Tailwind + Framer Motion.', tags: ['Next.js', 'TS', 'Tailwind'] } },
+    en: { title: 'Marketing Page in a Day', desc: 'A11y-first Next.js page with hero, social proof, pricing, FAQ. TS + Tailwind + Framer Motion.', tags: ['Next.js', 'TS', 'Tailwind'] },
+    ru: { title: 'Маркетинг-лендинг за день', desc: 'Доступный Next.js лендинг: hero, соцпруф, тарифы, FAQ. TS + Tailwind + Framer Motion.', tags: ['Next.js', 'TS', 'Tailwind'] } },
 
   /* ----- app-agnostic / persona skills (no specific tool needed) ----- */
   { id: 'site-designer', cat: 'universal', file: 'beautiful-site-designer.md', hot: true,
-    en: { title: 'Beautiful Site Designer', desc: 'Senior web-designer persona: art-direction, type scale, motion taste, accessibility — works regardless of stack.', tags: ['Web design', 'Persona', 'Taste'] },
-    ru: { title: 'Дизайнер красивых сайтов', desc: 'Персона сеньор-веб-дизайнера: арт-дирекшен, типографика, чувство моушна, доступность — без привязки к стеку.', tags: ['Веб-дизайн', 'Персона', 'Вкус'] } },
+    en: { title: 'Beautiful Site Designer', desc: 'Senior web-designer persona: art-direction, type scale, motion taste, accessibility. Works regardless of stack.', tags: ['Web design', 'Persona', 'Taste'] },
+    ru: { title: 'Дизайнер красивых сайтов', desc: 'Персона сеньор-веб-дизайнера: арт-дирекшен, типографика, чувство моушна, доступность. Без привязки к стеку.', tags: ['Веб-дизайн', 'Персона', 'Вкус'] } },
 
   { id: 'tea-sommelier', cat: 'universal', file: 'tea-sommelier.md',
-    en: { title: 'Tea Sommelier',           desc: 'Speaks like a master tea sommelier. Picks teas by mood, weather and pairing — explains brewing temperatures and ceremony.', tags: ['Lifestyle', 'Pairing', 'Ritual'] },
+    en: { title: 'Tea Sommelier',           desc: 'Speaks like a master tea sommelier. Picks teas by mood, weather and pairing, explains brewing temperatures and ceremony.', tags: ['Lifestyle', 'Pairing', 'Ritual'] },
     ru: { title: 'Чайный сомелье',          desc: 'Говорит как мастер чайной церемонии. Подбирает чай под настроение, погоду и пейринг, объясняет температуры и ритуал.', tags: ['Лайфстайл', 'Пейринг', 'Ритуал'] } },
 
   { id: 'startup-advisor', cat: 'universal', file: 'startup-advisor.md',
-    en: { title: 'Startup Advisor',         desc: 'Pragmatic ex-YC partner persona — pushes back on weak narrative, sharpens ICP, kills feature creep.', tags: ['Strategy', 'PM', 'Critique'] },
-    ru: { title: 'Стартап-эдвайзор',        desc: 'Прагматичная персона экс-YC партнёра — давит на слабый нарратив, заостряет ICP, рубит лишние фичи.', tags: ['Стратегия', 'PM', 'Критика'] } },
+    en: { title: 'Startup Advisor',         desc: 'Pragmatic ex-YC partner persona: pushes back on weak narrative, sharpens ICP, kills feature creep.', tags: ['Strategy', 'PM', 'Critique'] },
+    ru: { title: 'Стартап-эдвайзор',        desc: 'Прагматичная персона экс-YC партнёра: давит на слабый нарратив, заостряет ICP, рубит лишние фичи.', tags: ['Стратегия', 'PM', 'Критика'] } },
 
   { id: 'travel-concierge', cat: 'universal', file: 'travel-concierge.md',
     en: { title: 'Travel Concierge',        desc: 'Plans week-long itineraries with hidden gems, transit, dinner reservations and a Plan-B for rain.', tags: ['Travel', 'Planner', 'Local'] },
@@ -89,20 +89,20 @@ const SKILLS = [
 /* ---------- i18n ---------- */
 const I18N = {
   en: {
-    'meta.title': 'Skillforge — AI skills for vibe-coding',
+    'meta.title': 'Skillforge, AI skills for vibe-coding',
     'meta.desc':  'Beautiful .md and .txt skills that turn any AI into a production-grade designer, motion artist and 3D wizard.',
     'nav.skills': 'Skills', 'nav.models': 'Models', 'nav.apps': 'Apps', 'nav.pricing': 'Pricing', 'nav.how': 'How it works',
     'nav.browse': 'Browse skills', 'nav.cta': 'Get the pack',
 
     'hero.chip':   'New · 2,500+ skills, every frontier model, weekly drops',
     'hero.title1': 'Drop-in skills that turn your AI into',
-    'hero.sub':    'A library of carefully crafted <code>.md</code> and <code>.txt</code> prompts — load one into Claude, Gemini, ChatGPT, Codex, Kimi <em>or whichever model you use</em> and watch it ship like a senior.',
+    'hero.sub':    'A library of carefully crafted <code>.md</code> and <code>.txt</code> prompts. Load one into Claude, Gemini, ChatGPT, Codex, Kimi <em>or whichever model you use</em> and watch it ship like a senior.',
     'hero.cta1':   'Get the full pack', 'hero.cta2': 'See the skills →',
 
     // metric tiles
     'metric.skills.label': 'Library size',
     'metric.skills.unit':  'skills',
-    'metric.skills.cap':   'in the full library — this page shows a small selection',
+    'metric.skills.cap':   'in the full library, this page shows a small selection',
     'metric.skills.link':  'See pricing →',
     'metric.users.label':  'Active users',
     'metric.users.unit':   'creators',
@@ -127,28 +127,28 @@ const I18N = {
 
     'models.eye':    'Works with the models you already use',
     'models.title1': 'Plug into', 'models.title2': 'any frontier model',
-    'models.sub':    'Every skill is tested across the major providers. Drop the file in, paste the system prompt, or wire it into your agent — same quality everywhere.',
+    'models.sub':    'Every skill is tested across the major providers. Drop the file in, paste the system prompt, or wire it into your agent. Same quality everywhere.',
     'models.more':   '+ many more',
 
     'apps.eye':    'Creative tooling, automated',
     'apps.title1': 'Skills for the', 'apps.title2': 'apps you actually ship in',
-    'apps.sub':    'Photoshop generative passes, After Effects rigs, Premiere edits, Blender scenes, Figma systems — and any tool with a scripting API. Your model now speaks each one fluently.',
+    'apps.sub':    'Photoshop generative passes, After Effects rigs, Premiere edits, Blender scenes, Figma systems, and any tool with a scripting API. Your model now speaks each one fluently.',
     'apps.more':   'and many more',
 
     'skills.eye':    'The library',
     'skills.title1': '2,500+ skills.', 'skills.title2': 'A sampler below.',
-    'skills.sub':    'Search, filter by app, preview the prompt, copy or download. Every skill is a single file — this page shows a small selection of the full library.',
+    'skills.sub':    'Search, filter by app, preview the prompt, copy or download. Every skill is a single file. This page shows a small selection of the full library.',
     'skills.empty':  'No skills match your search. Try a different keyword or clear the filter.',
-    'skills.more':   'Showing a small selection — the full library has 2,500+ skills.',
+    'skills.more':   'Showing a small selection. The full library has 2,500+ skills.',
     'skills.morecta':'See pricing →',
-    'search.placeholder': "Search 2,500+ skills — try 'liquid glass', 'tea sommelier', 'mockup'…",
+    'search.placeholder': "Search 2,500+ skills, try 'liquid glass', 'tea sommelier', 'mockup'…",
 
     'filter.all': 'All', 'filter.univ': 'No app · personas', 'filter.ui': 'UI / Web', 'filter.ps': 'Photoshop', 'filter.ae': 'After Effects', 'filter.pr': 'Premiere', 'filter.3d': 'Blender', 'filter.fg': 'Figma',
 
     'how.eye': 'How it works', 'how.title1': 'Three steps,', 'how.title2': 'production-grade output',
     'how.s1t': 'Pick a skill',  'how.s1p': 'Browse the library, filter by app or model. Every card shows you the system prompt before you commit.',
     'how.s2t': 'Drop the file', 'how.s2p': 'Paste it as a system prompt, attach the <code>.md</code>, or load it into your Claude / Codex / Gemini skill slot.',
-    'how.s3t': 'Ship',          'how.s3p': 'The model now knows the rules, the references, the deliverables and the gotchas. Output is consistent — across sessions and across providers.',
+    'how.s3t': 'Ship',          'how.s3p': 'The model now knows the rules, the references, the deliverables and the gotchas. Output is consistent across sessions and across providers.',
 
     // pricing
     'price.eye':    'Pricing',
@@ -157,17 +157,17 @@ const I18N = {
     'price.sub':    'Lifetime updates on every plan. Cancel anytime. Team & studio licenses available.',
     'price.per':       '/ forever',
     'price.per.once':  '/ one-time',
-    'price.starter.tag': 'Starter', 'price.starter.sub': 'Sample the library — perfect for testing the workflow.',
+    'price.starter.tag': 'Starter', 'price.starter.sub': 'Sample the library. Perfect for testing the workflow.',
     'price.starter.f1': '12 sampler skills (this page)', 'price.starter.f2': 'All providers supported', 'price.starter.f3': 'Community support',
     'price.starter.cta': 'Browse free skills',
-    'price.pro.tag': 'Pro', 'price.pro.badge': '★ Most popular', 'price.pro.sub': 'The full library, forever — plus every new skill we ship.',
+    'price.pro.tag': 'Pro', 'price.pro.badge': '★ Most popular', 'price.pro.sub': 'The full library, forever. Plus every new skill we ship.',
     'price.pro.f1': '<b>2,500+</b> skills (full catalogue)', 'price.pro.f2': 'Weekly drops, lifetime updates', 'price.pro.f3': 'Works with any AI &amp; any app', 'price.pro.f4': 'Priority Discord support',
     'price.pro.cta': 'Get Pro',
     'price.studio.tag': 'Studio', 'price.studio.sub': 'Team license for agencies and product teams.',
     'price.studio.f1': 'Everything in Pro', 'price.studio.f2': 'Up to 25 seats', 'price.studio.f3': 'Custom skill on request', 'price.studio.f4': 'White-label option',
     'price.studio.cta': 'Talk to us',
 
-    'cta.title1': 'Get the full pack —', 'cta.title2': '2,500+ skills, lifetime updates.',
+    'cta.title1': 'Get the full pack,', 'cta.title2': '2,500+ skills, lifetime updates.',
     'cta.sub':    'One download. Works with every frontier model. New skills every week.',
     'cta.btn':    'Send me the pack',
     'cta.note':   'No spam. One email when the next drop ships. Unsubscribe in one click.',
@@ -179,26 +179,26 @@ const I18N = {
   },
 
   ru: {
-    'meta.title': 'Skillforge — AI-скиллы для вайбкодинга',
+    'meta.title': 'Skillforge, AI-скиллы для вайбкодинга',
     'meta.desc':  'Готовые .md и .txt скиллы, которые превращают любую нейронку в продакшн-дизайнера, моушн-артиста и 3D-вижуалера.',
     'nav.skills': 'Скиллы', 'nav.models': 'Модели', 'nav.apps': 'Приложения', 'nav.pricing': 'Тарифы', 'nav.how': 'Как это работает',
     'nav.browse': 'Каталог', 'nav.cta': 'Забрать пак',
 
     'hero.chip':   'Новое · 2500+ скиллов, все frontier-модели, дропы каждую неделю',
     'hero.title1': 'Готовые скиллы, превращающие твою нейронку в',
-    'hero.sub':    'Библиотека аккуратно собранных <code>.md</code> и <code>.txt</code> промтов — подгружаешь в Claude, Gemini, ChatGPT, Codex, Kimi <em>или любую другую модель</em> и получаешь результат уровня сеньора.',
+    'hero.sub':    'Библиотека аккуратно собранных <code>.md</code> и <code>.txt</code> промтов. Подгружаешь в Claude, Gemini, ChatGPT, Codex, Kimi <em>или любую другую модель</em> и получаешь результат уровня сеньора.',
     'hero.cta1':   'Забрать весь пак', 'hero.cta2': 'Открыть каталог →',
 
     'metric.skills.label': 'Размер библиотеки',
     'metric.skills.unit':  'скиллов',
-    'metric.skills.cap':   'в полной библиотеке — на этой странице только малая часть',
+    'metric.skills.cap':   'в полной библиотеке. На этой странице только малая часть',
     'metric.skills.link':  'Посмотреть тарифы →',
     'metric.users.label':  'Активных пользователей',
     'metric.users.unit':   'креаторов',
-    'metric.users.cap':    'еженедельно шипят со Skillforge',
+    'metric.users.cap':    'каждую неделю запускают проекты со Skillforge',
     'metric.models.label': 'Работает с',
     'metric.models.value': 'ЛЮБОЙ frontier-моделью',
-    'metric.models.cap':   'Claude, GPT, Gemini, Codex, Kimi — и с тем, что выйдет завтра',
+    'metric.models.cap':   'Claude, GPT, Gemini, Codex, Kimi, и с тем, что выйдет завтра',
     'metric.apps.label':   'Креативные тулы',
     'metric.apps.value':   'Photoshop · After Effects · Premiere · Blender · Figma',
     'metric.apps.cap':     '…и любой инструмент со скриптовым API',
@@ -215,21 +215,21 @@ const I18N = {
 
     'models.eye':    'Работает с моделями, которыми ты уже пользуешься',
     'models.title1': 'Подключай', 'models.title2': 'любую frontier-модель',
-    'models.sub':    'Каждый скилл протестирован у всех основных провайдеров. Положи файл, вставь системный промт или подключи в агенте — качество одинаковое.',
+    'models.sub':    'Каждый скилл протестирован у всех основных провайдеров. Положи файл, вставь системный промт или подключи в агенте. Качество одинаковое.',
     'models.more':   '+ ещё много',
 
-    'apps.eye':    'Креативные тулы — на автомате',
-    'apps.title1': 'Скиллы под', 'apps.title2': 'приложения, в которых ты реально шипишь',
-    'apps.sub':    'Генеративные проходы в Photoshop, риги в After Effects, монтаж в Premiere, сцены в Blender, системы в Figma — и любой тул со скриптовым API. Модель говорит на языке каждого.',
+    'apps.eye':    'Креативные тулы на автомате',
+    'apps.title1': 'Скиллы под', 'apps.title2': 'приложения, в которых ты реально работаешь',
+    'apps.sub':    'Генеративные проходы в Photoshop, риги в After Effects, монтаж в Premiere, сцены в Blender, системы в Figma, и любой тул со скриптовым API. Модель говорит на языке каждого.',
     'apps.more':   'и много других',
 
     'skills.eye':    'Каталог',
-    'skills.title1': '2500+ скиллов.', 'skills.title2': 'Ниже — небольшая выборка.',
-    'skills.sub':    'Ищи, фильтруй по приложению, смотри промт, копируй или скачивай. Каждый скилл — один файл. На странице показана малая часть полной библиотеки.',
+    'skills.title1': '2500+ скиллов.', 'skills.title2': 'Ниже небольшая выборка.',
+    'skills.sub':    'Ищи, фильтруй по приложению, смотри промт, копируй или скачивай. Каждый скилл это один файл. На странице показана малая часть полной библиотеки.',
     'skills.empty':  'Ничего не нашлось. Попробуй другое слово или сбрось фильтр.',
-    'skills.more':   'Здесь показана только выборка — в полной библиотеке 2500+ скиллов.',
+    'skills.more':   'Здесь показана только выборка. В полной библиотеке 2500+ скиллов.',
     'skills.morecta':'Посмотреть тарифы →',
-    'search.placeholder': 'Поиск по 2500+ скиллам — «liquid glass», «чайный сомелье», «мокап»…',
+    'search.placeholder': 'Поиск по 2500+ скиллам: «liquid glass», «чайный сомелье», «мокап»…',
 
     'filter.all': 'Все', 'filter.univ': 'Без приложения · персоны', 'filter.ui': 'UI / Web', 'filter.ps': 'Photoshop', 'filter.ae': 'After Effects', 'filter.pr': 'Premiere', 'filter.3d': 'Blender', 'filter.fg': 'Figma',
 
@@ -241,10 +241,10 @@ const I18N = {
     'price.eye':    'Тарифы',
     'price.title1': 'Выбери тариф,',
     'price.title2': 'разблокируй всю библиотеку 2500+ скиллов',
-    'price.sub':    'На каждом плане — обновления навсегда. Отмена в любой момент. Команды и студии — отдельные лицензии.',
+    'price.sub':    'На каждом плане обновления навсегда. Отмена в любой момент. Команды и студии получают отдельные лицензии.',
     'price.per':       '/ навсегда',
     'price.per.once':  '/ единоразово',
-    'price.starter.tag': 'Starter', 'price.starter.sub': 'Попробуй библиотеку — идеально для проверки воркфлоу.',
+    'price.starter.tag': 'Starter', 'price.starter.sub': 'Попробуй библиотеку. Идеально для проверки воркфлоу.',
     'price.starter.f1': '12 sampler-скиллов (на этой странице)', 'price.starter.f2': 'Любой провайдер', 'price.starter.f3': 'Поддержка в комьюнити',
     'price.starter.cta': 'Смотреть бесплатные',
     'price.pro.tag': 'Pro', 'price.pro.badge': '★ Популярный', 'price.pro.sub': 'Вся библиотека навсегда + все будущие дропы.',
@@ -254,10 +254,10 @@ const I18N = {
     'price.studio.f1': 'Всё из Pro', 'price.studio.f2': 'До 25 пользователей', 'price.studio.f3': 'Кастомный скилл под запрос', 'price.studio.f4': 'White-label',
     'price.studio.cta': 'Связаться',
 
-    'cta.title1': 'Забери весь пак —', 'cta.title2': '2500+ скиллов, обновления на всю жизнь.',
+    'cta.title1': 'Забери весь пак,', 'cta.title2': '2500+ скиллов, обновления на всю жизнь.',
     'cta.sub':    'Один файл. Работает со всеми frontier-моделями. Новые скиллы каждую неделю.',
     'cta.btn':    'Прислать пак',
-    'cta.note':   'Без спама. Одно письмо — когда выходит следующий дроп. Отписка в один клик.',
+    'cta.note':   'Без спама. Одно письмо когда выходит следующий дроп. Отписка в один клик.',
 
     'foot.skills': 'Скиллы', 'foot.models': 'Модели', 'foot.apps': 'Приложения', 'foot.pricing': 'Тарифы', 'foot.cta': 'Забрать пак',
     'foot.tag': 'Сделано для AI-вайбкодеров, которым важно, как ложатся пиксели.',
@@ -423,8 +423,8 @@ function applyLang(lang) {
   animateCounters();
 }
 
-/* ---------- rotating word (hero) ---------- */
-let _rotTimer = null;
+/* ---------- rotating word (typewriter) ---------- */
+let _rotTimeout = null;
 function rotatorWords(lang) {
   const dict = I18N[lang] || I18N.en;
   const out = [];
@@ -437,22 +437,53 @@ function rotatorWords(lang) {
 function startRotator(lang) {
   const el = document.querySelector('[data-rotator]');
   if (!el) return;
-  if (_rotTimer) { clearInterval(_rotTimer); _rotTimer = null; }
+  const container = el.closest('.rotator');
+  if (_rotTimeout) { clearTimeout(_rotTimeout); _rotTimeout = null; }
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const words = rotatorWords(lang);
   let i = 0;
-  el.classList.remove('is-out');
-  el.classList.add('is-in');
-  el.textContent = words[0];
-  _rotTimer = setInterval(() => {
-    el.classList.remove('is-in');
-    el.classList.add('is-out');
-    setTimeout(() => {
+
+  const TYPE_MS   = 70;   // per char typing
+  const ERASE_MS  = 38;   // per char erasing
+  const HOLD_MS   = 1800; // pause after fully typed
+  const GAP_MS    = 260;  // pause after fully erased
+
+  el.textContent = '';
+
+  function typeWord(word, k = 0) {
+    if (container) container.classList.add('is-typing');
+    el.textContent = word.slice(0, k);
+    if (k <= word.length) {
+      _rotTimeout = setTimeout(() => typeWord(word, k + 1), TYPE_MS);
+    } else {
+      if (container) container.classList.remove('is-typing');
+      _rotTimeout = setTimeout(eraseWord, HOLD_MS);
+    }
+  }
+
+  function eraseWord() {
+    const current = el.textContent;
+    if (current.length === 0) {
+      i = (i + 1) % words.length;
+      _rotTimeout = setTimeout(() => typeWord(words[i], 1), GAP_MS);
+      return;
+    }
+    if (container) container.classList.add('is-typing');
+    el.textContent = current.slice(0, -1);
+    _rotTimeout = setTimeout(eraseWord, ERASE_MS);
+  }
+
+  if (reduced) {
+    el.textContent = words[0];
+    _rotTimeout = setInterval(() => {
       i = (i + 1) % words.length;
       el.textContent = words[i];
-      el.classList.remove('is-out');
-      el.classList.add('is-in');
-    }, 320);
-  }, 2400);
+    }, 4000);
+    return;
+  }
+
+  typeWord(words[0], 1);
 }
 
 /* ---------- counter rollup ---------- */
@@ -528,52 +559,88 @@ function initTheme() {
   applyTheme(theme);
 }
 
-/* ---------- mouse tilt for preview card ---------- */
+/* ---------- mouse tilt for preview card (proximity-based) ---------- */
 function bindCardTilt() {
   const card = document.querySelector('[data-tilt]');
   if (!card) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const MAX_X = 14, MAX_Y = 18; // degrees
+  const MAX_X = 16, MAX_Y = 22;     // max rotation in degrees
+  const INFLUENCE = 320;             // px past card edge where tilt is still felt
+  const SHEEN_RANGE = 220;           // px range where sheen starts to glow
+
   let raf = null, lastX = 0, lastY = 0, rect = null;
+  let curTX = 0, curTY = 0, curTZ = 0, curSheen = 0;
 
-  const reset = () => {
-    card.classList.remove('is-tilting');
-    card.classList.add('is-idle');
-    card.style.setProperty('--tilt-x', '0deg');
-    card.style.setProperty('--tilt-y', '0deg');
-    card.style.setProperty('--tilt-z', '0px');
-  };
+  const refreshRect = () => { rect = card.getBoundingClientRect(); };
+  refreshRect();
 
-  card.addEventListener('pointerenter', () => {
-    rect = card.getBoundingClientRect();
-    card.classList.remove('is-idle');
-    card.classList.add('is-tilting');
-  });
+  // smoothly approach target each frame
+  function loop() {
+    if (!rect) refreshRect();
 
-  card.addEventListener('pointermove', e => {
-    if (!rect) rect = card.getBoundingClientRect();
-    lastX = e.clientX; lastY = e.clientY;
-    if (raf) return;
-    raf = requestAnimationFrame(() => {
-      const px = (lastX - rect.left) / rect.width;  // 0..1
-      const py = (lastY - rect.top)  / rect.height; // 0..1
-      const ry = (px - 0.5) *  2 * MAX_Y;            // rotateY
-      const rx = (0.5 - py) *  2 * MAX_X;            // rotateX
-      card.style.setProperty('--tilt-x', rx.toFixed(2) + 'deg');
-      card.style.setProperty('--tilt-y', ry.toFixed(2) + 'deg');
-      card.style.setProperty('--tilt-z', '20px');
-      card.style.setProperty('--sx', (px * 100).toFixed(1) + '%');
-      card.style.setProperty('--sy', (py * 100).toFixed(1) + '%');
-      raf = null;
-    });
-  });
+    // cursor offset relative to card center
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top  + rect.height / 2;
+    const dx = lastX - cx;
+    const dy = lastY - cy;
 
-  card.addEventListener('pointerleave', reset);
+    // normalized in [-1..1] within (half + INFLUENCE)
+    const halfW = rect.width  / 2 + INFLUENCE;
+    const halfH = rect.height / 2 + INFLUENCE;
+    let nx = Math.max(-1, Math.min(1, dx / halfW));
+    let ny = Math.max(-1, Math.min(1, dy / halfH));
 
-  // refresh rect on resize/scroll
-  window.addEventListener('resize', () => { rect = null; }, { passive: true });
-  window.addEventListener('scroll',  () => { rect = null; }, { passive: true });
+    // proximity 0..1: 1 at center, falls off past card edge
+    const distEdgeX = Math.max(0, Math.abs(dx) - rect.width  / 2);
+    const distEdgeY = Math.max(0, Math.abs(dy) - rect.height / 2);
+    const dist = Math.hypot(distEdgeX, distEdgeY);
+    const proximity = Math.max(0, 1 - dist / INFLUENCE);
+
+    // targets
+    const targetTY = nx * MAX_Y * proximity;          // rotateY (left/right)
+    const targetTX = -ny * MAX_X * proximity;         // rotateX (up/down)
+    const targetTZ = 24 * proximity;
+    const targetSheen = Math.max(0, 1 - Math.hypot(dx, dy) / SHEEN_RANGE);
+
+    // smooth (lerp)
+    const k = 0.14;
+    curTX += (targetTX - curTX) * k;
+    curTY += (targetTY - curTY) * k;
+    curTZ += (targetTZ - curTZ) * k;
+    curSheen += (targetSheen - curSheen) * k;
+
+    card.style.setProperty('--tilt-x', curTX.toFixed(2) + 'deg');
+    card.style.setProperty('--tilt-y', curTY.toFixed(2) + 'deg');
+    card.style.setProperty('--tilt-z', curTZ.toFixed(1) + 'px');
+    card.style.setProperty('--sheen', curSheen.toFixed(3));
+
+    // sheen position
+    const px = ((lastX - rect.left) / rect.width)  * 100;
+    const py = ((lastY - rect.top)  / rect.height) * 100;
+    card.style.setProperty('--sx', px.toFixed(1) + '%');
+    card.style.setProperty('--sy', py.toFixed(1) + '%');
+
+    // toggle idle float when proximity is essentially zero
+    const close = proximity > 0.02;
+    card.classList.toggle('is-tilting', close);
+    card.classList.toggle('is-idle', !close);
+
+    raf = requestAnimationFrame(loop);
+  }
+
+  window.addEventListener('pointermove', e => {
+    lastX = e.clientX;
+    lastY = e.clientY;
+  }, { passive: true });
+
+  // initial cursor off-screen so card starts idle
+  lastX = -9999; lastY = -9999;
+
+  window.addEventListener('resize', refreshRect, { passive: true });
+  window.addEventListener('scroll', refreshRect, { passive: true });
+
+  raf = requestAnimationFrame(loop);
 }
 
 /* ---------- subtle parallax for ambient blobs ---------- */
