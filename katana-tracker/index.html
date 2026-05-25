@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katana Price Tracker — SNIPER DUELS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="title">
+      <h1>Katana Prices</h1>
+      <span class="subtitle">SNIPER DUELS · Roblox</span>
+    </div>
+
+    <div class="controls">
+      <div class="toggle" id="modeToggle" role="tablist" aria-label="Selling or Buying">
+        <button class="toggle-btn active" data-mode="sell" role="tab" aria-selected="true">Selling</button>
+        <button class="toggle-btn" data-mode="buy" role="tab" aria-selected="false">Buying</button>
+      </div>
+
+      <div class="search">
+        <input id="searchInput" type="text" placeholder="Search: Crimson, Katana, Katana Crimson..." autocomplete="off" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="legend">
+      <span><b>WW</b> Well-Worn</span>
+      <span><b>SI</b> Standard Issue</span>
+      <span><b>MC</b> Mint Condition</span>
+      <span><b>FT</b> StatTrack</span>
+      <span class="hint">Hover price for min/max</span>
+    </div>
+
+    <section id="grid" class="grid"></section>
+
+    <p id="emptyState" class="empty" hidden>Ничего не найдено.</p>
+  </main>
+
+  <footer>
+    <small>Data aggregated from community trade chat. Prices in USD.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
